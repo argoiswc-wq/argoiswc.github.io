@@ -104,7 +104,14 @@ const Program = ({ program }) => html`
           <article class="schedule-item">
             <span class="time">${item.label}</span>
             <h3>${item.title}</h3>
-            <p>${item.text}</p>
+            <div class="program-parts">
+              ${item.parts.map((part) => html`
+                <div class="program-part">
+                  <h4>${part.title}</h4>
+                  <p>${part.text}</p>
+                </div>
+              `).join("")}
+            </div>
           </article>
         `).join("")}
       </div>

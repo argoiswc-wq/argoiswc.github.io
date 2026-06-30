@@ -511,6 +511,30 @@ section {
   background: var(--panel);
 }
 
+.program-parts {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.program-part {
+  padding: 15px;
+  border: 1px solid rgba(235, 95, 80, 0.18);
+  border-radius: var(--radius);
+  background: rgba(2, 28, 47, 0.48);
+}
+
+.program-part h4 {
+  margin: 0 0 7px;
+  color: #ffffff;
+  font-family: Outfit, Inter, sans-serif;
+  font-size: 0.98rem;
+}
+
+.program-part p {
+  margin: 0;
+}
+
 .time {
   display: inline-flex;
   margin-bottom: 14px;

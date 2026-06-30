@@ -20,7 +20,7 @@ const instituteLogos = [
     alt: "HES-SO logo",
   },
   {
-    src: "images/Universität_Freiburg_(Schweiz)_logo.svg.png",
+    src: "images/unifr_logo.png",
     alt: "University of Fribourg logo",
   },
   {
@@ -127,27 +127,35 @@ const topics = {
 const program = {
   id: "program",
   title: "Half-day Program",
-  lede: "ISWC half-day tutorials use two tutorial slots. ARGO is planned as an interactive session with at least half of the time dedicated to exercises, discussion, and collaborative analysis.",
+  lede: "ARGO is organized as a two-slot half-day tutorial, moving from foundations and semantic extraction to graph construction, Graph-RAG, tools, and agents.",
   items: [
     {
       label: "Slot 1",
-      title: "Foundations and Architecture",
-      text: "Motivation, system patterns, semantic extraction, graph modeling, and the role of provenance in document knowledge systems.",
-    },
-    {
-      label: "Hands-on",
-      title: "From Documents to Graph-RAG",
-      text: "Participants construct a compact workflow that links source documents, graph facts, vector context, and answer generation.",
+      title: "Foundations and Semantic Extraction",
+      parts: [
+        {
+          title: "Part 01: Foundations",
+          text: "LLM basics, agentic application patterns, and a first PydanticAI app.",
+        },
+        {
+          title: "Part 02: Semantic Extraction",
+          text: "Extract structured information from documents, websites, images, tables, and mixed-source collections.",
+        },
+      ],
     },
     {
       label: "Slot 2",
-      title: "Agentic Tool Orchestration",
-      text: "Graph-RAG becomes a callable tool within a broader agent that can select retrieval strategies and inspect evidence.",
-    },
-    {
-      label: "Interactive",
-      title: "Evaluation and Discussion",
-      text: "Group discussion on reliability, failure modes, reusable architectures, and opportunities for Semantic Web research.",
+      title: "Graph-RAG, Tools, and Agents",
+      parts: [
+        {
+          title: "Part 03: Graph Construction and Graph-RAG",
+          text: "Build a knowledge graph from extracted facts, connect it to retrieval, and use it for grounded document question answering.",
+        },
+        {
+          title: "Part 04: Tools and Agents",
+          text: "Expose extraction, graph lookup, retrieval, and validation as tools that agents can select and orchestrate.",
+        },
+      ],
     },
   ],
 };
