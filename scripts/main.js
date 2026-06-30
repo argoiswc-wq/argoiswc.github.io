@@ -4,6 +4,7 @@ const {
   cta,
   heroActions,
   heroMeta,
+  instituteLogos,
   navItems,
   outcomes,
   presenters,
@@ -37,7 +38,7 @@ const App = () => `
       ${Presenters({ presenters })}
       ${CallToAction({ cta })}
     </main>
-    ${Footer({ site })}
+    ${Footer({ site, logos: instituteLogos })}
   </div>
 `;
 

@@ -1,6 +1,10 @@
 (() => {
 const site = {
   brand: "ARGO 2026",
+  conferenceLogo: {
+    src: "images/logo.png",
+    alt: "ISWC Bari 2026 logo",
+  },
   title: "ARGO",
   titleHighlight: "Agentic Retrieval",
   titleSuffix: "& Graph Orchestration",
@@ -9,6 +13,33 @@ const site = {
   footerTitle: "ARGO: Agentic Retrieval and Graph Orchestration for Document Knowledge Systems",
   footerMeta: "ISWC 2026 Half-day Tutorial",
 };
+
+const instituteLogos = [
+  {
+    src: "images/HES_SO_Logo_RGB_page.webp",
+    alt: "HES-SO logo",
+  },
+  {
+    src: "images/Universität_Freiburg_(Schweiz)_logo.svg.webp",
+    alt: "University of Fribourg logo",
+  },
+  {
+    src: "images/SCAI_Logo_Claim_rgb_pos.png",
+    alt: "SCAI logo",
+  },
+  {
+    src: "images/logo_heia-fr_version_courte.jpg",
+    alt: "HEIA-FR logo",
+  },
+  {
+    src: "images/HumanTech_cmjn.jpg",
+    alt: "HumanTech Institute logo",
+  },
+  {
+    src: "images/icosys-logo.png",
+    alt: "iCoSys logo",
+  },
+];
 
 const navItems = [
   { label: "About", href: "#about" },
@@ -160,6 +191,7 @@ window.ARGO_CONTENT = {
   cta,
   heroActions,
   heroMeta,
+  instituteLogos,
   navItems,
   outcomes,
   presenters,

@@ -19,7 +19,10 @@ const renderSectionHeading = ({ title, lede }) => html`
 const Header = ({ site, navItems }) => html`
   <header>
     <nav class="container nav" aria-label="Primary navigation">
-      <a class="brand" href="#">${site.brand}</a>
+      <a class="brand-lockup" href="#" aria-label="${site.brand} home">
+        <img class="conference-logo" src="${site.conferenceLogo.src}" alt="${site.conferenceLogo.alt}">
+        <span class="brand">${site.brand}</span>
+      </a>
       <div class="nav-links">
         ${navItems.map(renderNavItem).join("")}
       </div>
@@ -151,7 +154,20 @@ const CallToAction = ({ cta }) => html`
   </section>
 `;
 
-const Footer = ({ site }) => html`
+const LogoStrip = ({ logos }) => html`
+  <section class="logo-strip" aria-label="Institutes">
+    <div class="container logo-strip-inner">
+      ${logos.map((logo) => html`
+        <div class="logo-tile">
+          <img src="${logo.src}" alt="${logo.alt}" loading="lazy">
+        </div>
+      `).join("")}
+    </div>
+  </section>
+`;
+
+const Footer = ({ site, logos }) => html`
+  ${LogoStrip({ logos })}
   <footer>
     <div class="container">
       <span>${site.footerTitle}</span>
