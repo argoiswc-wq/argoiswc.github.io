@@ -20,7 +20,7 @@ const instituteLogos = [
     alt: "HES-SO logo",
   },
   {
-    src: "images/Universität_Freiburg_(Schweiz)_logo.svg.webp",
+    src: "images/Universität_Freiburg_(Schweiz)_logo.svg.png",
     alt: "University of Fribourg logo",
   },
   {
