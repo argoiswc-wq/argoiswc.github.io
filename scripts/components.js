@@ -36,11 +36,23 @@ const WorkflowCard = ({ site, workflowNodes }) => html`
       <img src="${site.conferenceLogo.src}" alt="${site.conferenceLogo.alt}">
     </div>
     <div class="workflow">
-      <div class="line one"></div>
-      <div class="line two"></div>
-      <div class="line three"></div>
+      <svg class="workflow-lines" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="workflow-gradient-forward" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="rgba(240,122,107,0.25)"></stop>
+            <stop offset="100%" stop-color="rgba(201,63,54,0.95)"></stop>
+          </linearGradient>
+          <linearGradient id="workflow-gradient-reverse" x1="100%" y1="0%" x2="0%" y2="0%">
+            <stop offset="0%" stop-color="rgba(240,122,107,0.25)"></stop>
+            <stop offset="100%" stop-color="rgba(201,63,54,0.95)"></stop>
+          </linearGradient>
+        </defs>
+        <line class="workflow-line" data-connection="extract-graph" stroke="url(#workflow-gradient-forward)"></line>
+        <line class="workflow-line" data-connection="graph-retrieve" stroke="url(#workflow-gradient-reverse)"></line>
+        <line class="workflow-line" data-connection="retrieve-agent" stroke="url(#workflow-gradient-forward)"></line>
+      </svg>
       ${workflowNodes.map((node) => html`
-        <div class="node ${node.className}">${node.title}<span>${node.text}</span></div>
+        <div class="node ${node.className}" data-node="${node.className}">${node.title}<span>${node.text}</span></div>
       `).join("")}
     </div>
     <div class="floating-label">ARGO</div>

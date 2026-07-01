@@ -262,6 +262,25 @@ header {
   inset: 30px;
 }
 
+.workflow-lines {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.workflow-line {
+  fill: none;
+  stroke: rgba(201, 63, 54, 0.95);
+  stroke-width: 2;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+  filter: drop-shadow(0 0 8px rgba(235, 95, 80, 0.30));
+}
+
 .node {
   position: absolute;
   z-index: 2;
@@ -287,55 +306,28 @@ header {
 
 .node.extract {
   top: 6px;
-  left: 0;
+  left: 22px;
+  border-color: rgba(100, 167, 199, 0.60);
 }
 
 .node.graph {
   top: 108px;
   right: 8px;
-  border-color: rgba(235, 95, 80, 0.62);
+  /* border-color: rgba(235, 95, 80, 0.62); */
+  border-color: rgba(100, 167, 199, 0.60);
 }
 
 .node.retrieve {
   bottom: 96px;
-  left: 22px;
+  left: 0;
   border-color: rgba(100, 167, 199, 0.60);
 }
 
 .node.agent {
   right: 26px;
   bottom: 4px;
-  border-color: rgba(235, 95, 80, 0.58);
-}
-
-.line {
-  position: absolute;
-  z-index: 1;
-  height: 2px;
-  transform-origin: left center;
-  background: linear-gradient(90deg, rgba(240,122,107,0.25), rgba(201,63,54,0.95));
-  box-shadow: 0 0 16px rgba(235, 95, 80, 0.30);
-}
-
-.line.one {
-  top: 60px;
-  left: 132px;
-  width: 174px;
-  transform: rotate(36deg);
-}
-
-.line.two {
-  top: 184px;
-  left: 154px;
-  width: 123px;
-  transform: rotate(-16deg);
-}
-
-.line.three {
-  top: 184px;
-  left: 154px;
-  width: 138px;
-  transform: rotate(43deg);
+  /* border-color: rgba(235, 95, 80, 0.58); */
+  border-color: rgba(100, 167, 199, 0.60);
 }
 
 .floating-label {
@@ -734,10 +726,6 @@ footer .container {
 
   .node {
     width: 118px;
-  }
-
-  .line {
-    display: none;
   }
 
   section {

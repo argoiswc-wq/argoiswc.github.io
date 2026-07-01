@@ -63,22 +63,22 @@ const workflowNodes = [
   {
     className: "extract",
     title: "Extract",
-    text: "documents to semantic facts",
+    text: "Web sources and documents to semantic facts",
   },
   {
     className: "graph",
     title: "Graph",
-    text: "entities, relations, provenance",
+    text: "Entities, relations, provenance",
   },
   {
     className: "retrieve",
     title: "Retrieve",
-    text: "hybrid graph and vector context",
+    text: "Hybrid graph and vector context",
   },
   {
     className: "agent",
     title: "Orchestrate",
-    text: "MCP tools and answers",
+    text: "Agents, tools and answers",
   },
 ];
 
